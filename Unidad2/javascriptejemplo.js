@@ -57,8 +57,8 @@ function festivo(){
 }     
 }
 
-potencia();
-potencia2();
+//potencia();
+//potencia2();
 
 function potencia(){
     let x=1;
@@ -76,4 +76,36 @@ function potencia2(){
         x++;
     }
 
+}
+
+//breakPrueba();
+
+function breakPrueba(){
+let auxclave=true;
+let numveces=0;
+//Mientras no introduzca la clave y no se pulse Cancelar
+while (auxclave !== "anonimo" && auxclave){
+ auxclave=prompt("Introduce la clave ","");
+ console.log("Error, prueba otra vez ");
+ numveces++;
+ if (numveces === 3)
+ break;
+}
+if (auxclave=="SuperClave"){
+console.log("La clave es correcta");
+}else{
+console.log("La clave no es correcta correcta");
+}
+}
+
+
+multiplos();
+
+function multiplos(){
+    for (i=2;i<=50;i++){
+        if((i%2)===0){
+            continue;  
+        }
+        console.log(i);
+    }
 }
