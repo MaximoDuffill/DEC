@@ -4,7 +4,7 @@
     console.log ("Hola mundo");
 
     //Como crear una alerta
-    alert("Hola mundo");
+   // alert("Hola mundo");
 
     
     //Como nombrar variables
@@ -36,3 +36,44 @@
       
         piBIS=3.14;
     }
+
+//festivo();
+
+function festivo(){
+    let diaSem;
+    diaSem=prompt("Introduce el día de la semana ", "");
+    if (diaSem === "domingo")
+    {
+    console.log("Hoy es festivo");
+    }
+    else {
+        if (diaSem === "lunes" || diaSem === "martes" || diaSem === "miercoles" || diaSem === "jueves" || diaSem === "viernes")
+     { 
+            console.log("Hoy no es domingo, a trabajar!!");
+     }else{
+                console.log("Error");
+                }
+               
+}     
+}
+
+potencia();
+potencia2();
+
+function potencia(){
+    let x=1;
+    for (i=2;i<=1000;i*=2){
+        console.log("2 elevado a "+x+" es igual a " +i);
+        x++;
+    }
+}
+
+function potencia2(){
+    let x=1, i=1000, y=2, potencia=1; 
+    while (y<i){
+        console.log("2 elevado a "+  x +" es igual a " +potencia );
+        potencia = y*=2;
+        x++;
+    }
+
+}
