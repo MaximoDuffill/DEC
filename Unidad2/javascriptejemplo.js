@@ -57,26 +57,47 @@ function festivo(){
 }     
 }
 
-//potencia();
-//potencia2();
+potencia();
+potencia2();
 
 function potencia(){
     let x=1;
+    console.time('loop');
+    var a = new Array(10000000);
     for (i=2;i<=1000;i*=2){
         console.log("2 elevado a "+x+" es igual a " +i);
         x++;
+    
+    
+    // Lo que queremos medir
+    
+    for (var n = 0; n < a.length; n++) {
+    a[n] = n * n;
     }
+    
+    }
+    console.timeEnd('loop');
 }
 
 function potencia2(){
-    let x=1, i=1000, y=2, potencia=1; 
+    let x=1, i=1000, y=2, potencia=1;
+    console.time('loop');
+    // Lo que queremos medir
+    var a = new Array(10000000); 
     while (y<i){
         console.log("2 elevado a "+  x +" es igual a " +potencia );
         potencia = y*=2;
         x++;
+
+    
+    for (var n = 0; n < a.length; n++) {
+    a[n] = n * n;
+    }
+    
+    }
+    console.timeEnd('loop');
     }
 
-}
 
 //breakPrueba();
 
@@ -99,7 +120,7 @@ console.log("La clave no es correcta correcta");
 }
 
 
-multiplos();
+//multiplos();
 
 function multiplos(){
     for (i=2;i<=50;i++){
