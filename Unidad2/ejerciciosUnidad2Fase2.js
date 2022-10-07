@@ -9,6 +9,7 @@ programa mostrará un mensaje "Buen trabajo"; de lo contrario, mostrará un mens
 9. Escriba un programa JavaScript para calcular los días que quedan hasta la
 próxima Navidad.
 */
+
 /*
 10. Escriba un programa JavaScript para calcular la multiplicación y división de dos
 números (entrada del usuario).
@@ -34,6 +35,12 @@ Salida esperada :
 60 ° C es 140 ° F
 45 ° F es 7.222222222222222 ° C
 */
+let tempC = prompt("Introduce una temperatura en Celsius: ");
+let tempF = prompt("Introduce una temperatura en Fahrneheit: ");
+
+document.write(((tempC*9)/5)+32);
+document.write((tempF/5));
+
 /*
 12. Escriba un programa JavaScript para obtener la URL del sitio web (página de
 carga).
