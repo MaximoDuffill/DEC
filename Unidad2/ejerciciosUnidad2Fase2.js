@@ -5,10 +5,35 @@ aproximado. Si la entrada del usuario coincide con el número de conjetura, el
 programa mostrará un mensaje "Buen trabajo"; de lo contrario, mostrará un mensaje
 "No coincide".
 */
-/*
+numRand=Math.floor(Math.random()*10);
+let numAprox = prompt("Introduce un numero para comprobar si coincide con el numero creado aleatoriamente: ");
+if(numAprox==numRand)
+{
+    document.write("Buen Trabajo" +"</br>");
+}
+else{
+    document.write("No coincide"+"</br>");
+}
+/* 
 9. Escriba un programa JavaScript para calcular los días que quedan hasta la
 próxima Navidad.
 */
+let hoy = new Date();
+let navidadAnio = hoy.getFullYear();
+
+if (hoy.getMonth() == 11 && hoy.getDate() > 25) {
+  navidadAnio = navidadAnio + 1;
+}
+
+let fechaNavidad = new Date(navidadAnio, 11, 25);
+let diaMilisegundos = 1000 * 60 * 60 * 24;
+
+let diasRestantes = Math.ceil(
+  (fechaNavidad.getTime() - hoy.getTime()) /
+   (diaMilisegundos)
+);
+
+document.write("Quedan " + diasRestantes +" dias hasta navidad."+"</br>");
 
 /*
 10. Escriba un programa JavaScript para calcular la multiplicación y división de dos
@@ -38,8 +63,8 @@ Salida esperada :
 let tempC = prompt("Introduce una temperatura en Celsius: ");
 let tempF = prompt("Introduce una temperatura en Fahrneheit: ");
 
-document.write(((tempC*9)/5)+32);
-document.write((tempF/5));
+document.write("La conversion de Celsius a Fahneheit es: "+(((tempC*9)/5)+32)+"</br>");
+document.write("La conversion de Fahrneheit a Celsius es: "+(tempF/5)+"</br>");
 
 /*
 12. Escriba un programa JavaScript para obtener la URL del sitio web (página de
@@ -51,14 +76,19 @@ alert(URLactual);
 13. Escriba un ejercicio de JavaScript para crear una variable con un nombre
 definido por el usuario.
 */
-let nombre = prompt("Introduce un nombre: ");
-document.write(nombre);
+let nombre = prompt("Introduce un nombre para la variable: ");
+let var_name = nombre;
+let var_value = nombre;
+
+this[var_name] = var_value;
+console.log(var_name);
+document.write(this[var_name]);
 /*
 14. Escriba un ejercicio de JavaScript para obtener la extensión de un nombre de
 archivo.
 */
 let archivo = "Ejemplo.txt";
-document.write("El archivo es un: "+ archivo.split(".").pop());
+document.write("</br>"+"El archivo es un: "+ archivo.split(".").pop());
 /*
 15. Escriba un programa JavaScript para obtener la diferencia entre un número dado
 y 13, si el número es mayor que 13 devuelva el doble de la diferencia absoluta.
@@ -143,4 +173,8 @@ if(numVer1 > 49 & numVer1 < 91)
 else if(numVer2 > 49 &  numVer2 < 91)
 {
     document.write("Verdadero </br>");
+}
+else
+{
+    document.write("Falso");
 }
